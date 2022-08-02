@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!--Instancia vue sin paquetización-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <title>form with Vue</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <div class="title-form">
+      <h1 class="title">Keep in touch!</h1>
+    </div>
+    <main>
+               <!--VUE V-MODEL-->
+      <form class="container">
+        <h2 class="title-container">Dejanos tus datos!
+        </h2>
+        <input
+        v-model="name"
+          class="input"
+          type="text"
+          name="name"
+          id="name"
+          placeholder="name"
+        />
+        <input
+        v-model="lastname"
+          class="input"
+          type="text"
+          name="lastname"
+          id="lastname"
+          placeholder="lastname"
+        />
+        <input
+        v-model="age"
+          class="input"
+          type="number"
+          name="age"
+          id="age"
+          maxlength="2"
+          placeholder="age"
+        />
+        <input
+        v-model="phone"
+          class="input"
+          type="number"
+          name="phone"
+          id="phone"
+          maxlength="12"
+          placeholder="phone"
+        />
+        <input
+        v-model="email"
+          class="input"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="email@123abc.com"
+        />
+        <div class="container-button">
+          <button class="button">Enviar</button>
+        </form>
+      </div>
+    </main>
+    <footer class="footer">
+        <h2 class="text-footer">Creado con 💗  por <span class="name">©Andrea Salas</span></h2>
+    </footer>
+    <script type="module" src="main.js"></script>
+    <!--SE CREA INSTANCIA VUE Y SE ALMACENA EN mountedApp-->
+    <!--ANCLAR INSTANCIA VUE-->
+    <script>const mountedApp = app.mount("#app");</script>
+  </body>
+</html>

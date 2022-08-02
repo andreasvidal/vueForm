@@ -1,0 +1,60 @@
+{
+  "name": "formularioconvue",
+  "version": "1.0.0",
+  "description": "formulario con vue",
+  "main": "main.js",
+  "dependencies": {
+    "vue": "3.2.37"
+  },
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "vue"
+  ],
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true
+    },
+    "extends": "plugin:vue-libs/recommended"
+  },
+  "settings": {
+    "vetur.useWorkspaceDependencies": true,
+    "vetur.experimental.templateInterpolationService": true
+  },
+  "keywords": [
+    "vue",
+    "web-component"
+  ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:vue/recommended"
+    ],
+    "rules": {
+      "vue/html-self-closing": "off"
+    },
+  "module.exports": {
+  "settings": {
+    "vetur.useWorkspaceDependencies": true,
+    "vetur.experimental.templateInterpolationService": true
+  },
+ 
+  "projects": [
+    "'./packages/repo2'", 
+    {
+      "root": "./packages/repo1",
+      "package": "./package.json",
+      "tsconfig": "./tsconfig.json",
+      "snippetFolder": "./.vscode/vetur/snippets",
+      "globalComponents": [
+        "./src/components/**/*.vue"
+      ]
+    }
+  ]
+},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrea Salas",
+  "license": "ISC"
+}
